@@ -1,0 +1,40 @@
+{
+  "gaTrackerIdGRAMMY": "UA-10765415-4", 
+  "gaTrackerIdLATINGRAMMY": "UA-10765415-20", 
+  "gaTrackerIdRECORDINGACADEMY": "UA-10765415-30", 
+  "gaTrackerIdMUSICARES": "UA-10765415-28", 
+  "gaTrackerIdLGCF": "UA-10765415-32", 
+  "gaTrackerIdLATINRECORDINGACADEMY": "UA-10765415-31", 
+  "gtmContainerId": "GTM-PF3MZS8",
+  "cookies": {
+      "accept": "#btn-cookie-allow",
+      "decline": "#btn-cookie-reject"
+  },
+  "pages": {
+    "lgcf_prod_homepage": "https://www.latingrammyculturalfoundation.org/",
+    "grammys_prod": "https://grammy.com",
+    "recordingacademy_prod": "https://www.recordingacademy.com/",
+    "musicares_prod": "https://www.musicares.org/",
+    "lgcf__dev_homepage": "https://www.latingrammyculturalfoundation.org/",
+    "grammys_dev": "https://grammy.com",
+    "recordingacademy_dev": "https://www.recordingacademy.com/",
+    "musicares_dev": "https://www.musicares.org/"
+  },
+  "grammyprodnewspages": {
+    "news": "https://www.grammy.com/news",
+    "newsdetails1": "https://www.grammy.com/news/5-rising-afrobeat-subgenres-and-artists-afroswing-ndombolo-afro-trap",
+    "newsdetails2": "https://www.grammy.com/news/newport-folk-festival-2022-recap-taj-mahal-rhiannon-giddens-brandi-carlile-joni-mitchell-paul-simon"
+
+  },
+  "grammyprodvideopages": {
+    "videos": "https://www.grammy.com/videos",
+    "videosdetails": "https://www.grammy.com/videos/dylan-sinclair-kirk-franklin-hello-fear-cover-performance-reimagined-at-home"
+  },
+  "grammyprodmusicgenres": {
+    "musicgenres": "https://www.grammy.com/music-genres",
+    "danceeletronic": "https://www.grammy.com/music-genre/dance-electronic-music"
+  },
+  "grammyprodartists": {
+    "artistpage": "https://www.grammy.com/artists/maluma/251895"
+  }
+}
