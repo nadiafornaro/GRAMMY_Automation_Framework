@@ -13,7 +13,7 @@ module.exports = defineConfig({
     embeddedScreenshots: true,
     overwrite: false,
     json: true,
-   
+
   },
   lgcf_prod_homepage: "https://www.latingrammyculturalfoundation.org/",
   lgcf_dev_homepage: "https://www.latingrammyculturalfoundation.org/",
@@ -24,8 +24,7 @@ module.exports = defineConfig({
   musicares_prod: "https://www.musicares.org/",
   musicares_dev: "https://develop-tra-musicares-org.vercel.app//",
   latingrammys_prod_homepage: "https://www.latingrammy.com/es",
-  latingrammys_dev_homepage: "https://dev-tra-lg-cfoundation.vercel.app/es",
- 
+  latingrammys_dev_homepage: "https://dev-lra-grammy.vercel.app/es",
   musicares_dev: "https://www.musicares.org/",
   e2e: {
     setupNodeEvents(on, config) {
