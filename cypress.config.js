@@ -15,7 +15,7 @@ module.exports = defineConfig({
     json: true,
 
   },
-  lgcf_prod_homepage: "https://www.latingrammyculturalfoundation.org/",
+  lgcf_prod_homepage: "https://www.latingrammyculturalfoundation.org/es",
   lgcf_dev_homepage: "https://www.latingrammyculturalfoundation.org/",
   grammys_prod: "https://grammy.com",
   grammys_dev: "https://develop-tra-grammy.vercel.app/",

@@ -7,9 +7,7 @@ const urls = ['https://develop-tra-recording-academy.vercel.app',
   'https://develop-tra-recording-academy.vercel.app/news/grammy-museum-preferred-bank-li-yu-grace-donation',
   'https://develop-tra-recording-academy.vercel.app/membership',
   'https://develop-tra-recording-academy.vercel.app/awards/rules-guidelines',
-  'https://develop-tra-recording-academy.vercel.app/about',
-  'https://develop-tra-recording-academy.vercel.app/news/california-arts-and-music-initiative-ballot-proposition-28-ballot',
-  'https://develop-tra-recording-academy.vercel.app/advocacy/news/congress-back-action-september-three-things-music-makers-should-watch-capitol-hill'];
+  'https://develop-tra-recording-academy.vercel.app/about'];
 describe('Validate RECORDING ACADEMY dev Google Anlytics', { tags: 'dev' }, function () {
 
   beforeEach(function () {

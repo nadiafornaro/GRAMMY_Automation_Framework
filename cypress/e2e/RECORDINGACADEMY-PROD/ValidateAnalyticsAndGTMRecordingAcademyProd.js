@@ -3,13 +3,19 @@ Cypress.on('window:before:load', (win) => {
 })
 
 const urls = ['https://www.recordingacademy.com/',
+'https://www.recordingacademy.com/press-room',
+'https://www.recordingacademy.com/press-room/executives',
+'https://www.recordingacademy.com/inclusion',
+'https://www.recordingacademy.com/producers-engineers-wing/leadership',
+'https://www.recordingacademy.com/producers-engineers-wing/technical-guidelines',
   'https://www.recordingacademy.com/news',
   'https://www.recordingacademy.com/news/grammy-museum-preferred-bank-li-yu-grace-donation',
   'https://www.recordingacademy.com/membership',
   'https://www.recordingacademy.com/awards/rules-guidelines',
   'https://www.recordingacademy.com/about',
   'https://www.recordingacademy.com/advocacy/news',
-  'https://www.recordingacademy.com/advocacy/news/california-arts-and-music-initiative-ballot-proposition-28-ballot'];
+  'https://www.recordingacademy.com/advocacy/news/california-arts-and-music-initiative-ballot-proposition-28-ballot',
+'https://www.recordingacademy.com/press-room/media-contacts'];
 describe('Validate RECORDING ACADEMY PROD Google Anlytics', { tags: 'prod' }, function () {
 
   beforeEach(function () {

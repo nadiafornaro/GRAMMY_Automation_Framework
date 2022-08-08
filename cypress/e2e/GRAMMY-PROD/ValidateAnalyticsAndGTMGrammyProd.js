@@ -38,15 +38,13 @@ const urls = ['https://www.grammy.com/',
   'https://live.grammy.com/?utm_source=grammy.com&utm_medium=referral',
   'https://www.grammy.com/news/where-can-i-watch-how-to-watch-2022-grammys-awards-show-online-livestream',
   'https://www.grammy.com/awards/64th-annual-grammy-awards-2021',
-  'https://grammymuseumstore.com/pages/grammy-awards',
-  'https://grammymuseum.org/contact/newsletter/',
   'https://www.grammy.com/awards/lifetime-achievement-awards',
   'https://www.grammy.com/awards/trustee-awards',
   'https://www.grammy.com/awards/technical-awards',
   'https://www.grammy.com/awards/music-educator-award',
   'https://www.grammy.com/awards/hall-of-fame-award',
   'https://grammy.recordingacademy.com/awards/awards-journey',
-  'https://www.grammy.com/legal#privacy'
+  'https://www.grammy.com/news/jay-z-grammys-speech-blue-ivy-beyonce-holy-grail-justin-timberlake-best-rap-sung-collaboration-win-2014-video-rewind'
 ];
 
 describe('Validate GRAMMY PROD Google Anlytics', { tags: 'prod' }, function () {

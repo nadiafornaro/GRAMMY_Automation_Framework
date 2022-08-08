@@ -1,0 +1,44 @@
+const artists = ['maluma',
+  'taylor swift',
+  'ariana grande',
+  'jay z',
+  'shakira',
+  'BTS'
+];
+
+
+describe('Validate Search Functionality in GRAMMY PROD' { tags: 'prod' }, function () {
+
+  beforeEach(function () {
+    cy.viewport(1400, 900)
+    cy.fixture('config.json').as('cfg');
+  })
+
+  it('Open GRAMMY Home Page', function () {
+    cy.openGRAMMYprodhomepage()
+  })
+
+  it('Click in search button', function () {
+    cy.openGRAMMYprodhomepage()
+  })
+
+  artists.forEach(artist => {
+    describe(`Loading URL and validade Google Analytics pageview function: ${url}`, () => {
+      it('Validate GRAMMY PROD Google Anlytics ', function () {
+        cy.visit(url);
+        cy.wait(500);
+        cy.get('@ga')
+          // ensure GA was created with our google analytics ID
+          .should('be.calledWith', 'create', this.cfg.gaTrackerIdGRAMMY)
+          .and('be.calledWithMatch', /.+send/, 'pageview')
+        cy.log('GA validated')
+      })
+      describe(`Validating GTM script on: ${url}`, () => {
+        it('Validating GTM ', function () {
+          cy.checkGTM("gtm")
+          cy.log('GTM Validated')
+        })
+      })
+    })
+  })
+})
