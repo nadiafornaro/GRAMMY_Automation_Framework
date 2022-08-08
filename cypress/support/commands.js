@@ -98,3 +98,8 @@ Cypress.Commands.add('checkGTM', (label) => {
       "GTM is loaded");
   })
 });
+
+Cypress.Commands.add('clickOnSearchGRAMMY', () => {
+  cy.get('.w-\[330px\]')
+    .click
+})

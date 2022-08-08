@@ -20,10 +20,9 @@ module.exports = (on, config) => {
   require('cypress-grep/src/plugin')(config)
   // make sure to return the config object
   // as it might have been modified by the plugin
+ 
   return config
 }
 // cypress/support/index.js
-
-
 
 
