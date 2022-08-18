@@ -44,3 +44,4 @@ cypress/report/mochawesome-report/GrammyAutomationTest_08032022_180050.html
 cypress/report/
 cypress/screenshots
 cypress/videos
+cypress/node_modules

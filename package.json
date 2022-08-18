@@ -1,7 +1,7 @@
 {
   "devDependencies": {
-    "cypress": "^10.3.1",
-    "cypress-grep": "^3.0.2",
+    "cypress": "^10.4.0",
+    "cypress-grep": "^2.6.1",
     "cypress-multi-reporters": "^1.6.0",
     "cypress-ntlm-auth": "^4.0.2",
     "cypress-xpath": "^2.0.1",
