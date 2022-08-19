@@ -21,7 +21,7 @@ describe('Validate News Landing Page in GRAMMY PROD' ,{ tags: 'prod' }, function
 
   it('Validate News Landing page default Elements', function () {
     cy.log('Validating News article details open from News landing page')
-    cy.wait(1000) // waiting for the page fully load
+    cy.wait(2000) // waiting for the page fully load
     cy.contains('LATEST NEWS').should('have.text', 'LATEST NEWS')
     cy.contains('FILTER YOUR RESULTS BY:').should('have.text', 'FILTER YOUR RESULTS BY:')
     cy.get('.max-w-xl > .uppercase').should('be.visible')
