@@ -1,54 +1,54 @@
-describe('Validate MetaData Functionality in GRAMMY PROD', { tags: 'prod' }, function () {
+describe('Validate MetaData Functionality in Musicares PROD', { tags: 'prod' }, function () {
 
     beforeEach(function () {
         cy.viewport(1400, 900)
         cy.fixture('config.json').as('cfg');
     })
 
-    it('Open GRAMMY Home Page', function () {
-        cy.openGRAMMYprodhomepage()
+    it('Open MusiCares Home Page', function () {
+        cy.openMUSICARESprodhomepage()
     })
 
     //confirm the meta tag description includes the expected text
     it('Confirm MetaData Description', function () {
         cy.get('head meta[name=description]')
             .should('have.attr', 'content')
-            .should('include', 'For the latest GRAMMY news, GRAMMY Awards photos and videos, and information on GRAMMY winners, nominees, and other artists, visit GRAMMY.com.')
+            .should('include', "MusiCares is a charity that has provided Millions in health, financial, and rehabilitation resources to music people in times of need by helping the humans behind music because music gives so much to the world")
     })
 
     //confirm the meta tag Twitter includes the expected text
     it('Confirm MetaData for Twitter', function () {
         cy.get('head meta[name="twitter:site"]')
             .should('have.attr', 'content')
-            .should('include', "@RecordingAcad")
+            .should('include', "@MusiCares")
     })
 
     //confirm the meta tag Twitter Site ID includes the expected text
     it('Confirm MetaData for Twitter Site ID', function () {
         cy.get('head meta[property="twitter:site:id"]')
             .should('have.attr', 'content')
-            .should('include', "17243213")
+            .should('include', "214684028")
     })
 
     //confirm the meta tag property og:title includes the expected text
     it('Confirm property og:title', function () {
         cy.get('head meta[property="og:title"]')
             .should('have.attr', 'content')
-            .should('include', 'Official Site | GRAMMYs | GRAMMY.com')
+            .should('include', 'MusiCares Home | MusiCares.org')
     })
 
     //confirm the meta tag property og:description includes the expected text
     it('Confirm property og:description', function () {
         cy.get('head meta[property="og:description"]')
             .should('have.attr', 'content')
-            .should('include', "Visit GRAMMYs's official site for everything you need to know about the Recording Academy's year-round work in this area.")
+            .should('include', "MusiCares is a charity that has provided Millions in health, financial, and rehabilitation resources to music people in times of need by helping the humans behind music because music gives so much to the world")
     })
 
     //confirm the meta tag property og:url includes the expected text
     it('Confirm property og:url', function () {
         cy.get('head meta[property="og:url"]')
             .should('have.attr', 'content')
-            .should('include', 'https://www.grammy.com/')
+            .should('include', 'https://musicares.org/')
     })
 
     //confirm the meta tag property og:type includes the expected text
@@ -62,14 +62,14 @@ describe('Validate MetaData Functionality in GRAMMY PROD', { tags: 'prod' }, fun
     it('Confirm property og:image', function () {
         cy.get('head meta[property="og:image"]')
             .should('have.attr', 'content')
-            .should('include', 'https://i8.amplience.net/i/naras/banner.default')
+            .should('include', 'https://i8.amplience.net/i/naras/mc_1880x1060_color_1')
     })
 
     //confirm the meta tag property og:image:alt includes the expected text
     it('Confirm property og:image:alt', function () {
         cy.get('head meta[property="og:image:alt"]')
             .should('have.attr', 'content')
-            .should('include', 'GRAMMY.com')
+            .should('include', 'MusiCares')
     })
 
     //confirm the meta tag property og:image:width includes the expected text
@@ -97,13 +97,14 @@ describe('Validate MetaData Functionality in GRAMMY PROD', { tags: 'prod' }, fun
     it('Confirm MetaData for keywords', function () {
         cy.get('head meta[name="keywords"]')
             .should('have.attr', 'content')
-            .should('include', "grammy, grammys, gram, GRAMMY, awards, awards show")
+            .should('include', "MusiCares, Donations, Help, GRAMMY, Recording Academy")
     })
 
     //confirm the meta tag property site_name includes the expected text
     it('Confirm MetaData for site name', function () {
         cy.get('head meta[property="site_name"]')
             .should('have.attr', 'content')
-            .should('include', "GRAMMY.com")
+            .should('include', "MusiCares.org")
     })
+
 })

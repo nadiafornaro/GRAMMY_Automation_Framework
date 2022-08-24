@@ -9,7 +9,7 @@ describe('Validate News Landing Page in GRAMMY PROD' ,{ tags: 'prod' }, function
       cy.fixture('config.json').as('cfg');
     })
   
-    it('Open GRAMMY Home Page', function () {
+    it('Open MusiCares Home Page', function () {
       cy.openMUSICARESprodhomepage()
     })
   

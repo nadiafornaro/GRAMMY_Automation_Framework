@@ -50,6 +50,10 @@ Cypress.Commands.add('openRECORDINGACADEMYprodhomepage', () => {
   cy.visit((Cypress.config('recordingacademy_prod')), { failOnStatusCode: false })
 })
 
+Cypress.Commands.add('openRECORDINGACADEMYADVOCACYprodhomepage', () => {
+  cy.visit((Cypress.config('recordingacademyadvocacy_prod')), { failOnStatusCode: false })
+})
+
 Cypress.Commands.add('openRECORDINGACADEMYdevhomepage', () => {
   cy.visit((Cypress.config('recordingacademy_dev')), { failOnStatusCode: false })
   cy.get('input').type('EjlMB6OqSc13')
