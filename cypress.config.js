@@ -11,7 +11,7 @@ module.exports = defineConfig({
     reportFilename: 'GrammyAutomationTest',
     timestamp: 'mmddyyyy_HHMMss',
     embeddedScreenshots: true,
-    overwrite: false,
+    overwrite: true,
     json: true,
 
   },

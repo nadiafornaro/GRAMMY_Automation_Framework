@@ -2,21 +2,17 @@
 
 
 
-describe('Validate News Landing Page in GRAMMY PROD' ,{ tags: 'prod' }, function () {
+describe('Validate News Landing Page in ADVOCACY PROD' ,{ tags: 'prod' }, function () {
 
     beforeEach(function () {
       cy.viewport(1400, 900)
       cy.fixture('config.json').as('cfg');
     })
   
-    it('Open RECORDING ACADEMY Home Page', function () {
-      cy.openRECORDINGACADEMYprodhomepage()
-    })
-  
-    it('Open MusicNews landing page', function () {
+    it('Open ADVOCACY News landing page', function () {
     //  cy.contains('NEWS').should('be.visible')
-      cy.get(':nth-child(3) > .block').click()
-      cy.wait(5000)
+      cy.visit('https://www.recordingacademy.com/advocacy/news')
+      cy.wait(4000)
     })
   
     it('Validate News Landing page default Elements', function () {
