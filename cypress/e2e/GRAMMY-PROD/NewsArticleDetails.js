@@ -59,7 +59,7 @@ describe('Validate News Landing Page in GRAMMY PROD' ,{ tags: 'prod' }, function
 
         it('Validating News article text', function () {
           //news article text validation
-          cy.get('.overflow-hidden > :nth-child(2) > :nth-child(2) > :nth-child(3)')
+          cy.get('[class*="w-full"]')
           .invoke('text').should('have.length.gt', 0)
           cy.log(' News article text validated')
 
