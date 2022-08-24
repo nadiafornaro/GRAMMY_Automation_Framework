@@ -1,7 +1,7 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
-  projectId: 'ibvaky',
+  projectId: 'dah26m',
   screenshotOnRunFailure: true,
   reporter: 'mochawesome',
   reporterOptions: {
@@ -12,7 +12,7 @@ module.exports = defineConfig({
     timestamp: 'mmddyyyy_HHMMss',
     embeddedScreenshots: true,
     overwrite: true,
-    json: true,
+    json: true
 
   },
   lgcf_prod_homepage: "https://www.latingrammyculturalfoundation.org/es",
