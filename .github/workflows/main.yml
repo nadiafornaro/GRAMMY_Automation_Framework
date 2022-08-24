@@ -1,10 +1,11 @@
+name: My CI-CD 
 on:
   push: 
     branches: [master]
 jobs: 
   build: 
-    runs-on: ubuntu-latest
-   
-    steps: 
-      — run: | 
+    runs-on: self-hosted
+    steps: |
+      — uses: actions/checkout@v2 
+      — run: |
           npx cypress run --record grep="PROD"
