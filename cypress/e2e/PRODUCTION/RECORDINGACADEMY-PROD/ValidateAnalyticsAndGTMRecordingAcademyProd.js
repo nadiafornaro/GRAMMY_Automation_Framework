@@ -15,7 +15,8 @@ const urls = ['https://www.recordingacademy.com/',
   'https://www.recordingacademy.com/about',
   'https://www.recordingacademy.com/advocacy/news',
   'https://www.recordingacademy.com/advocacy/news/california-arts-and-music-initiative-ballot-proposition-28-ballot',
-'https://www.recordingacademy.com/press-room/media-contacts'];
+'https://www.recordingacademy.com/press-room/media-contacts',
+'https://grammy.recordingacademy.com/awards/awards-journey'];
 describe('Validate RECORDING ACADEMY PROD Google Anlytics', { tags: 'prod' }, function () {
 
   beforeEach(function () {

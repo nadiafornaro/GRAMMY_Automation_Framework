@@ -25,7 +25,7 @@ describe('Validate News Landing Page in GRAMMY PROD' ,{ tags: 'prod' }, function
     
       it('Validating News Article details thumbnail', function () {
         cy.visit(url)
-        cy.wait(500);
+        cy.wait(2000);
         cy.get('[class*="relative article-photo-wrapper isolate"]').should('be.visible')
         cy.log('News Article details thumbnail validated')
       })
