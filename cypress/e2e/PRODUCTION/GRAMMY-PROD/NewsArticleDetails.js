@@ -2,9 +2,7 @@
 
 const newsarticles = ['https://www.grammy.com/news/hauser-lets-get-loud-jennifer-lopez-cover-the-player-new-album-cello-orchestra-performance-video-reimagined-at-home',
   'https://www.grammy.com/news/7-sets-from-all-points-east-2022-gorillaz-the-chemical-brothers-femi-kuti-highschool',
-  'https://www.grammy.com/news/hailee-steinfeld-coast-new-song-anderson-paak-album-california-beach-boys-music', 'https://www.grammy.com/news/panda-bear-reset-with-sonic-boom-mixes-hope-and-anxiety-60s-samples-animal-collective-spirit', 
-  'https://www.grammy.com/news/johan-lenox-you-up-wdywtbwygu-new-album-song-2022-performance-video-press-play-at-home', 
-  'https://www.grammy.com/news/who-is-fatou-samba-k-pop-first-african-idol-new-mixtape-blackswan-comeback'
+  'https://www.grammy.com/news/johan-lenox-you-up-wdywtbwygu-new-album-song-2022-performance-video-press-play-at-home'
 ];
 
 

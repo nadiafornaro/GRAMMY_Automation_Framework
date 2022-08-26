@@ -1,7 +1,6 @@
 /// <reference types="cypress-xpath" />
 
 const urls = ['https://www.grammy.com/',
-'https://develop-tra-grammy.vercel.app/news/panda-bear-reset-with-sonic-boom-mixes-hope-and-anxiety-60s-samples-animal-collective-spirit',
   'https://www.grammy.com/awards',
   'https://live.grammy.com/?utm_source=grammy.com&utm_medium=referral', 'https://www.grammy.com/music-genres', 
   'https://www.grammy.com/awards/64th-annual-grammy-awards-2021', 
@@ -35,7 +34,7 @@ const urls = ['https://www.grammy.com/',
 ];
 
 
-describe('Validate SiteUp and Runninh in GRAMMY PROD' ,{ tags: 'prod' }, function () {
+describe('Validate SiteUp and Running in GRAMMY PROD' ,{ tags: 'prod' }, function () {
 
     beforeEach(function () {
       cy.viewport(1400, 900)
