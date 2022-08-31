@@ -1,25 +1,31 @@
 /// <reference types="cypress-xpath" />
 
-const urls = ['https://www.grammy.com/',
+const urls = [
+  'https://www.grammy.com/',
   'https://www.grammy.com/awards',
-  'https://live.grammy.com/?utm_source=grammy.com&utm_medium=referral', 'https://www.grammy.com/music-genres', 
+  'https://live.grammy.com/?utm_source=grammy.com&utm_medium=referral', 
+  'https://www.grammy.com/music-genres', 
   'https://www.grammy.com/awards/64th-annual-grammy-awards-2021', 
   'https://grammymuseumstore.com/pages/grammy-awards',
   'https://www.grammy.com/awards/lifetime-achievement-awards',
   'https://www.grammy.com/awards',
-  'https://www.grammy.com/awards/trustee-awards', 'https://www.grammy.com/awards/technical-awards', 
+  'https://www.grammy.com/awards/trustee-awards', 
+  'https://www.grammy.com/awards/technical-awards', 
   'https://www.grammy.com/awards/music-educator-award', 
   'https://www.grammy.com/awards/hall-of-fame-award',
   'https://grammy.recordingacademy.com/awards/awards-journey',
-  'https://www.recordingacademy.com/awards/rules-guidelines', 'https://www.recordingacademy.com/awards/voting-process', 
+  'https://www.recordingacademy.com/awards/rules-guidelines', 
+  'https://www.recordingacademy.com/awards/voting-process', 
   'https://www.recordingacademy.com/awards/faq', 
   'https://www.grammy.com/news/marcus-king-pain-young-blood-new-song-album-performance-video-dan-auerbach-classic-rock-press-play-at-home',
   'https://www.grammy.com/music-genre/rock',
-  'https://www.grammy.com/music-genre/r-and-b', 'https://www.grammy.com/music-genre/country', 
+  'https://www.grammy.com/music-genre/r-and-b', 
+  'https://www.grammy.com/music-genre/country', 
   'https://www.grammy.com/music-genre/rap', 
   'https://www.grammy.com/music-genre/latin',
   'https://www.grammy.com/music-genre/global-music',
-  'https://www.grammy.com/music-genre/gospel-contemporary-christian-music', 'https://www.grammy.com/music-genre/new-age', 
+  'https://www.grammy.com/music-genre/gospel-contemporary-christian-music', 
+  'https://www.grammy.com/music-genre/new-age', 
   'https://www.grammy.com/music-genre/jazz', 
   'https://www.grammy.com/music-genre/alternative',
   'https://www.grammy.com/videos',
@@ -51,8 +57,9 @@ describe('Validate SiteUp and Running in GRAMMY PROD' ,{ tags: 'prod' }, functio
       })
   
 
-    it('Validating URL is not returning server error', function () {
+    it('Validating URL is not returning server error and page could not be found', function () {
         cy.get('html:root').eq(0).should('not.have.value', 'Internal Server Error')
+        cy.get('html:root').eq(0).should('not.have.value', 'This page could not be found.')
         cy.wait(500);
         cy.log('Validation Complete')
       })

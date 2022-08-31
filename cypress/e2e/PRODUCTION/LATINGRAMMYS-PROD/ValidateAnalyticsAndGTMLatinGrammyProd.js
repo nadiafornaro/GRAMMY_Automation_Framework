@@ -2,7 +2,8 @@ Cypress.on('window:before:load', (win) => {
   win.ga = cy.stub().as('ga')
 })
 
-const urls = ['https://www.latingrammy.com/es',
+const urls = [
+'https://www.latingrammy.com/es',
 'https://www.latingrammy.com/es/photos',
 'https://www.latingrammy.com/es/photos/latin-grammy-2',
 'https://www.latingrammy.com/es/videos',
