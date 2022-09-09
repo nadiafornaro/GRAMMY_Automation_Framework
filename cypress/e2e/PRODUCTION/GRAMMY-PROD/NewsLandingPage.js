@@ -10,6 +10,7 @@ describe('Validate News Landing Page in GRAMMY PROD' ,{ tags: 'prod' }, function
   })
 
   it('Open GRAMMY Home Page', function () {
+    defaultCommandTimeout: 20000
     cy.openGRAMMYprodhomepage()
   })
 
@@ -20,6 +21,7 @@ describe('Validate News Landing Page in GRAMMY PROD' ,{ tags: 'prod' }, function
   })
 
   it('Validate News Landing page default Elements', function () {
+    defaultCommandTimeout: 20000
     cy.log('Validating News article details open from News landing page')
     cy.wait(2000) // waiting for the page fully load
     cy.contains('LATEST NEWS').should('have.text', 'LATEST NEWS')

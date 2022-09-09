@@ -22,8 +22,9 @@ describe('Validate SiteUp and Running in GRAMMY PROD' ,{ tags: 'prod' }, functio
     describe(`Loading Music Genre URL: ${url}`, () => {
     
       it('Opening URL', function () {
+        defaultCommandTimeout: 20000
         cy.visit(url)
-        cy.wait(1000);
+        cy.wait(2000);
         cy.log('Validation Complete')
       })
   

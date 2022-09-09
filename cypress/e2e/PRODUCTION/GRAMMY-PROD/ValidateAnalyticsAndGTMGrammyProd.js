@@ -4,7 +4,6 @@ Cypress.on('window:before:load', (win) => {
 
 const urls = ['https://www.grammy.com/',
   'https://www.grammy.com/news',
-  'https://www.grammy.com/news/5-rising-afrobeat-subgenres-and-artists-afroswing-ndombolo-afro-trap',
   'https://www.grammy.com/news/newport-folk-festival-2022-recap-taj-mahal-rhiannon-giddens-brandi-carlile-joni-mitchell-paul-simon',
   'https://grammy.com/videos',
   'https://grammy.com/videos/dylan-sinclair-kirk-franklin-hello-fear-cover-performance-reimagined-at-home',
@@ -63,7 +62,7 @@ describe('Validate GRAMMY PROD Google Anlytics', { tags: 'prod' }, function () {
       it('Validate GRAMMY PROD Google Anlytics ', function () {
         defaultCommandTimeout: 20000
         cy.visit(url);
-        cy.wait(500);
+        cy.wait(3000);
         cy.get('@ga')
           // ensure GA was created with our google analytics ID
           .should('be.calledWith', 'create', this.cfg.gaTrackerIdGRAMMY)

@@ -10,6 +10,7 @@ describe('Validate Videos Content in GRAMMY PROD', { tags: 'prod' }, function ()
 
     describe('Start Videos page validation', { tags: 'prod' }, function () {
     it('Validate watch now button', function () {
+        defaultCommandTimeout: 20000
         cy.get('.relative > .flex > .text-base')
         .should('have.text','WATCH NOW')
 
@@ -17,12 +18,14 @@ describe('Validate Videos Content in GRAMMY PROD', { tags: 'prod' }, function ()
 
     describe('Validate video hero', { tags: 'prod' }, function () {
     it('Validate video hero', function () {
+        defaultCommandTimeout: 20000
         cy.get('.embla-video-hero').should('be.visible')
         cy.log('Video Hero validated')
     })})
 
     describe('Click on videos hero list content and make sure it opens correctly', { tags: 'prod' }, function () {    
     it('Click on videos hero list content and make sure it opens correctly', function () {
+        defaultCommandTimeout: 20000
         cy.get('.active > .h-full').click()
         cy.get('.relative > .flex > .text-base')
         .should('have.text','WATCH NOW')
