@@ -54,12 +54,14 @@ describe('Validate GRAMMY PROD Google Anlytics', { tags: 'prod' }, function () {
   })
 
   it('Open GRAMMY Home Page', function () {
+    defaultCommandTimeout: 20000
     cy.openGRAMMYprodhomepage()
   })
 
   urls.forEach(url => {
     describe(`Loading URL and validade Google Analytics pageview function: ${url}`, () => {
       it('Validate GRAMMY PROD Google Anlytics ', function () {
+        defaultCommandTimeout: 20000
         cy.visit(url);
         cy.wait(500);
         cy.get('@ga')
@@ -70,6 +72,7 @@ describe('Validate GRAMMY PROD Google Anlytics', { tags: 'prod' }, function () {
       })
       describe(`Validating GTM script on: ${url}`, () => {
         it('Validating GTM ', function () {
+          defaultCommandTimeout: 20000
           cy.checkGTM("gtm")
           cy.log('GTM Validated')
         })
