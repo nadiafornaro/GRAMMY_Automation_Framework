@@ -10,7 +10,6 @@ describe('Validate News Landing Page in ADVOCACY PROD' ,{ tags: 'prod' }, functi
     })
   
     it('Open ADVOCACY News landing page', function () {
-    //  cy.contains('NEWS').should('be.visible')
       cy.visit('https://www.recordingacademy.com/advocacy/news')
       cy.wait(4000)
     })

@@ -1,4 +1,4 @@
-//const cypress = require("cypress");
+/// <reference types="cypress-xpath" />
 
 describe('Validate Videos Content in GRAMMY PROD', { tags: 'prod' }, function () {
 
@@ -9,71 +9,31 @@ describe('Validate Videos Content in GRAMMY PROD', { tags: 'prod' }, function ()
     })
 
     describe('Start Videos page validation', { tags: 'prod' }, function () {
-    it('Validate watch now button', function () {
-        //defaultCommandTimeout: 20000
-        //cy.get('.relative > .flex > .text-base')
-       // .should('have.text','WATCH NOW')
+        it('Validate watch now button', function () {
+            defaultCommandTimeout: 20000
+            cy.xpath('//*[@id="__next"]/div/main/section/section[2]/div/div/a[1]/div/div/div/p')
+                .should('have.text', 'WATCH NOW')
+        })
 
+        describe('Validate video hero carousel', { tags: 'prod' }, function () {
+            it('Validate video hero carousel', function () {
+                defaultCommandTimeout: 20000
+                cy.get('.embla-series-video-carousel > .embla__container').should('be.visible')
+                cy.log('Video Hero carousel validated')
+            })
+        })
+
+        describe('Click on Latest video list content and make sure it opens correctly', { tags: 'prod' }, function () {
+            it('Click on latest video list content and make sure it opens correctly', function () {
+                defaultCommandTimeout: 20000
+                for (let i = 1; i < 6; i++) {
+                    cy.xpath(`//*[@id="__next"]/div/main/section/section[2]/div/div/a[${i}]`).click()
+                    cy.get('.embla-related-video-carousel > .embla__container', { timeout: 20000 }).should('be.visible')
+                    cy.log(`Related Videos carousel validated #${i}`)
+                    cy.visit('https://www.grammy.com/videos')
+                    cy.wait(2000)
+                }
+            })
+        })
     })
-
-    describe('Validate video hero', { tags: 'prod' }, function () {
-    it('Validate video hero', function () {
-       // defaultCommandTimeout: 20000
-        //cy.get('.embla-video-hero').should('be.visible')
-       //cy.log('Video Hero validated')
-    })})
-
-    describe('Click on videos hero list content and make sure it opens correctly', { tags: 'prod' }, function () {    
-    it('Click on videos hero list content and make sure it opens correctly', function () {
-        // defaultCommandTimeout: 20000
-        // cy.get('.active > .h-full').click()
-        // cy.get('.relative > .flex > .text-base')
-        // .should('have.text','WATCH NOW')
-        // .click()
-        // cy.wait(400)
-        // cy.get('.ml-auto').should('be.visible')
-        // cy.log('Video player validated')
-        // cy.get('.embla-related-video-carousel').should('be.visible')
-        // cy.log('Related videos validated')
-
-        // cy.visit('https://www.grammy.com/videos')
-        // cy.wait(400)
-        // cy.get('.embla__container > :nth-child(2) > .h-full').click()
-        // cy.get('.relative > .flex > .text-base')
-        // .should('have.text','WATCH NOW')
-        // .click()
-        // cy.wait(400)
-        // cy.get('.ml-auto').should('be.visible')
-        // cy.log('Video player validated')
-        // cy.get('.embla-related-video-carousel').should('be.visible')
-        // cy.log('Related videos validated')
-
-        // cy.visit('https://www.grammy.com/videos')
-        // cy.wait(2000)
-        // cy.get('.embla__container > :nth-child(3) > .h-full').click()
-        // cy.get('.relative > .flex > .text-base')
-        // .should('have.text','WATCH NOW')
-        // .click()
-        // cy.wait(400)
-        // cy.get('.ml-auto').should('be.visible')
-        // cy.log('Video player validated')
-        // cy.get('.embla-related-video-carousel').should('be.visible')
-        // cy.log('Related videos validated')
-
-      
-
-        
-
-        // cy.visit('https://www.grammy.com/videos')
-        // cy.wait(2000)
-        // cy.get(':nth-child(4) > .h-full').click()
-        // cy.get('.relative > .flex > .text-base')
-        // .should('have.text','WATCH NOW')
-        // .click()
-        // cy.wait(2000)
-        // cy.get('.ml-auto').should('be.visible')
-    })})
-
-})
-
 })
