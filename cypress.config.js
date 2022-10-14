@@ -2,7 +2,7 @@ const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   projectId: 'dah26m',
-  pageLoadTimeout: 40000,
+  pageLoadTimeout: 120000,
   screenshotOnRunFailure: true,
   reporter: 'mochawesome',
   reporterOptions: {
