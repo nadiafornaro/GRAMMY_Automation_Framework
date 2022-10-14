@@ -28,18 +28,14 @@ describe('Validate SiteUp and Running in Advocacy PROD' ,{ tags: 'prod' }, funct
     urls.forEach(url => {
     describe(`Loading URL: ${url}`, () => {
     
-      it('Opening URL', function () {
+      it('Opening URL and validating URL there is neither server error nor page could not be found error', function () {
         cy.visit(url)
-        cy.wait(1000);
-        cy.log('Validation Complete')
-      })
-  
-
-    it('Validating URL is not returning server error and page could not be found', function () {
-        cy.get('html:root').eq(0).should('not.have.value', 'Internal Server Error')
-        cy.get('html:root').eq(0).should('not.have.value', 'This page could not be found.')
-        cy.wait(500);
-        cy.log('Validation Complete')
+        cy.get('body').should('be.visible', {timeout: 10000})
+        .then(()=>{
+          cy.get('html:root').eq(0).should('not.have.value', 'Internal Server Error')
+          cy.get('html:root').eq(0).should('not.have.value', 'This page could not be found.')
+          cy.log('Validation Complete')
+        })
       })
     })
   })
