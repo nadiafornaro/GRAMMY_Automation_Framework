@@ -36,23 +36,4 @@ describe('Validate GRAMMY PROD Google Anlytics', { tags: 'prod' }, function () {
 
   })
 
-  it.skip('Validate GRAMMY PROD Google Anlytics ', function () {
-    cy.get('@urls').then(json => {
-      var urls = json.urls
-      urls.forEach(url => {
-        cy.log(`Visiting ${url}`)
-        cy.visit(url)
-        cy.wait(3000);
-        cy.get('@ga')
-          // ensure GA was created with our google analytics ID
-          .should('be.calledWith', 'create', this.cfg.gaTrackerIdGRAMMY)
-          .and('be.calledWithMatch', /.+send/, 'pageview')
-        cy.log('GA validated')
-        cy.log('Validating GTM')
-        cy.checkGTM("gtm")
-        cy.log('GTM Validated')
-        cy.log('Validation Complete')
-      })
-    })
-  })
 })

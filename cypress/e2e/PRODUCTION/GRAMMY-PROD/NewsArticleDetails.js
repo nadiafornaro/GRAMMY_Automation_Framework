@@ -1,9 +1,9 @@
 /// <reference types="cypress-xpath" />
 
-var json = require('../../../fixtures/NewsArticlesUrls.json')
-var urls = Object.values(json.urls)
-
 describe('Validate News Landing Page in GRAMMY PROD', { tags: 'prod' }, function () {
+
+  var json = require('../../../fixtures/NewsArticlesUrls.json')
+  var urls = Object.values(json.urls)
 
   beforeEach(function () {
     cy.viewport(1400, 900)
