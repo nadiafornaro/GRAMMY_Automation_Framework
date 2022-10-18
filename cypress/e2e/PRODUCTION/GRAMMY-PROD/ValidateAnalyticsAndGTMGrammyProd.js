@@ -33,5 +33,7 @@ describe('Validate GRAMMY PROD Google Anlytics', { tags: 'prod' }, function () {
       cy.log('GTM Validated')
       cy.log('Validation Complete')
     })
+
   })
+
 })
