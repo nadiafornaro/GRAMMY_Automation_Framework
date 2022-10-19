@@ -1,18 +1,7 @@
 /// <reference types="cypress-xpath" />
 
-const urls = [
-  'https://www.musicares.org/',
-  'https://www.musicares.org/donations',
-  'https://www.musicares.org/about',
-  'https://www.musicares.org/get-help',
-  'https://www.musicares.org/news',
-  'https://www.recordingacademy.com/advocacy/news',
-  'https://www.musicares.org/events',
-  'https://grammymuseumstore.com/pages/musicares?utm_source=musicares.org&utm_medium=referral',
-  'https://www.musicares.org/person-year',
-  'https://www.musicares.org/?form=donate'
-];
-
+var json = require('../../../fixtures/MusicaresUrls.json')
+var urls = Object.values(json.urls)
 
 describe('Validate SiteUp and Running in MusiCares PROD' ,{ tags: 'prod' }, function () {
 
@@ -22,22 +11,17 @@ describe('Validate SiteUp and Running in MusiCares PROD' ,{ tags: 'prod' }, func
     })
     
     urls.forEach(url => {
-    describe(`Loading URL: ${url}`, () => {
     
-      it('Opening URL', function () {
+      it(`Checking ${url}`, function () {
         cy.visit(url)
         cy.wait(1000);
         cy.log('Validation Complete')
-      })
-  
-
-    it('Validating URL is not returning server error and page could not be found', function () {
         cy.get('html:root').eq(0).should('not.have.value', 'Internal Server Error')
         cy.get('html:root').eq(0).should('not.have.value', 'This page could not be found.')
         cy.wait(500);
         cy.log('Validation Complete')
       })
-    })
+  
   })
 })
   

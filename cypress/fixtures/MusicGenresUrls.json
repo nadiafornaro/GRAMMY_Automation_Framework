@@ -1,14 +1,14 @@
 {
     "urls": [
-        "https://www.grammy.com/music-genre/rock",
-        "https://www.grammy.com/music-genre/r-and-b", 
+        "https://www.grammy.com/music-genre/alternative",
         "https://www.grammy.com/music-genre/country", 
-        "https://www.grammy.com/music-genre/rap", 
-        "https://www.grammy.com/music-genre/latin",
         "https://www.grammy.com/music-genre/global-music",
         "https://www.grammy.com/music-genre/gospel-contemporary-christian-music", 
-        "https://www.grammy.com/music-genre/new-age", 
         "https://www.grammy.com/music-genre/jazz", 
-        "https://www.grammy.com/music-genre/alternative"
+        "https://www.grammy.com/music-genre/latin",
+        "https://www.grammy.com/music-genre/new-age", 
+        "https://www.grammy.com/music-genre/r-and-b", 
+        "https://www.grammy.com/music-genre/rap", 
+        "https://www.grammy.com/music-genre/rock"
     ]
 }
