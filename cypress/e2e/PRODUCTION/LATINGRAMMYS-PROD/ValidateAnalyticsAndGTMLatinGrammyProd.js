@@ -24,7 +24,7 @@ describe('Validate LATIN GRAMMY PROD Home Page', { tags: 'latingrammyprod' }, fu
       cy.wait(3000);
       cy.get('@ga')
         // ensure GA was created with our google analytics ID
-        .should('be.calledWith', 'create', this.cfg.gaTrackerIdGRAMMY)
+        .should('be.calledWith', 'create', this.cfg.gaTrackerIdLATINGRAMMY)
         .and('be.calledWithMatch', /.+send/, 'pageview')
       cy.log('GA validated')
       cy.log('Validating GTM')
