@@ -14,7 +14,7 @@ describe('Validate LATIN GRAMMY PROD Home Page', { tags: 'latingrammyprod' }, fu
 
   it('Open GRAMMY Home Page', function () {
     defaultCommandTimeout: 20000
-    cy.openGRAMMYprodhomepage()
+    cy.openLATINGRAMMYprodhomepage()
   })
 
   var urls = json.urls
