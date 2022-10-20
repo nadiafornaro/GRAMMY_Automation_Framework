@@ -1,53 +1,33 @@
 /// <reference types="cypress-xpath" />
 
-const newsarticles = ['https://www.recordingacademy.com/news/hip-hop-mental-health-facing-the-stigma-together-grammy-museum-takeaways',
-  'https://www.recordingacademy.com/news/recording-academy-black-music-collective-amazon-music-your-future-is-now-2022-scholarship-recipients',
-  'https://www.recordingacademy.com/news/grammy-museum-grant-program-awards-20-thousand-music-research-sound-preservation',
-  'https://www.recordingacademy.com/news/elects-19-new-leaders-2022-2023-national-board-trustees'
-];
+describe('Validate News Landing Page in RECORD ACADEMY PROD', { tags: 'prod' }, function () {
 
-
-describe('Validate News Article details Page in RECORDING ACADEMY PROD', { tags: 'prod' }, function () {
+  var json = require('../../../fixtures/NewsArticlesUrlsRA.json')
+  var urls = Object.values(json.urls)
 
   beforeEach(function () {
     cy.viewport(1400, 900)
     cy.fixture('config.json').as('cfg');
   })
 
-  it('Open RECORDING ACADEMY Home Page', function () {
-    cy.openRECORDINGACADEMYprodhomepage()
-  })
-
-
-  newsarticles.forEach(url => {
+  urls.forEach(url => {
     describe(`Loading News URL: ${url}`, () => {
 
       it('Validating News Article details thumbnail', function () {
         cy.visit(url)
-        cy.wait(500);
+        cy.wait(2000);
         cy.get('[class*="relative article-photo-wrapper isolate"]').should('be.visible')
         cy.log('News Article details thumbnail validated')
       })
 
       it('Validating News Article details read list block ', function () {
-        cy.get('ol > :nth-child(1) > .flex')
-          .should('be.visible')
-          .click()
-        cy.get('ol > :nth-child(2) > .flex')
-          .should('be.visible')
-          .click()
-        cy.get('ol > :nth-child(3) > .flex')
-          .should('be.visible')
-          .click()
-        cy.get('ol > :nth-child(4) > .flex')
-          .should('be.visible')
-          .click()
-        cy.get('ol > :nth-child(5) > .flex')
-          .should('be.visible')
-          .click()
+        for (let i = 1; i < 6; i++) {
+          cy.get(`ol > :nth-child(${i}) > .flex`)
+            .should('be.visible')
+            .click()
+        }
 
         cy.log('Read list block is visible and automation is able to navigate through it')
-
 
       })
 

@@ -2,7 +2,7 @@
 
 describe('Validate News Landing Page in GRAMMY PROD', { tags: 'prod' }, function () {
 
-  var json = require('../../../fixtures/NewsArticlesUrls.json')
+  var json = require('../../../fixtures/NewsArticlesGrammyUrls.json')
   var urls = Object.values(json.urls)
 
   beforeEach(function () {
