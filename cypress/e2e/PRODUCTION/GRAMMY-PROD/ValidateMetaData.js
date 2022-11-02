@@ -34,14 +34,14 @@ describe('Validate MetaData Functionality in GRAMMY PROD', { tags: 'prod' }, fun
     it('Confirm property og:title', function () {
         cy.get('head meta[property="og:title"]')
             .should('have.attr', 'content')
-            .should('include', 'Official Site | GRAMMYs | GRAMMY.com')
+            .should('include', "GRAMMY.com is the Official Site of Music's Biggest Night | GRAMMY.com")
     })
 
     //confirm the meta tag property og:description includes the expected text
     it('Confirm property og:description', function () {
         cy.get('head meta[property="og:description"]')
             .should('have.attr', 'content')
-            .should('include', "Visit GRAMMYs's official site for everything you need to know about the Recording Academy's year-round work in this area.")
+            .should('include', "For the latest GRAMMY news, GRAMMY Awards photos and videos, and information on GRAMMY winners, nominees, and other artists, visit GRAMMY.com.")
     })
 
     //confirm the meta tag property og:url includes the expected text
