@@ -15,6 +15,7 @@ describe('Validate SiteUp and Running in GRAMMY PROD', { tags: 'prod' }, functio
             cy.visit(url)
             cy.wait(1000);
             cy.get('html:root').eq(0).should('not.have.value', 'Internal Server Error')
+            cy.get('html:root').eq(0).should('not.have.value', 'This page could not be found.')
             cy.wait(500);
             cy.log('Validation Complete')
         })
